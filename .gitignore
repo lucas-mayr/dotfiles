@@ -1,0 +1,8 @@
+# Temp files
+*.swp
+*.swo
+*~
+
+# GPG
+*.gpg
+*.asc
