@@ -12,7 +12,7 @@ packages:
 	sudo ./common/packages.sh
 
 i3:
-	@-cp -an $(HOME)/.config/i3 $(HOME)/.config/i3.bkp
+	@-mv $(HOME)/.config/i3 $(HOME)/.config/i3.bkp
 	ln -s -f $(CURDIR)/common/i3 $(HOME)/.config/i3
 
 urist:
@@ -22,18 +22,18 @@ ohmyzsh:
 	sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 vim:
-	@-cp -an $(HOME)/.vim $(HOME)/.vim.bkp
+	@-mv $(HOME)/.vim $(HOME)/.vim.bkp
 	ln -s -f $(CURDIR)/common/.vim $(HOME)/.vim
 
 zsh:
-	@-cp -an $(HOME)/.zshrc $(HOME)/.zshrc.bkp
+	@-mv $(HOME)/.zshrc $(HOME)/.zshrc.bkp
 	ln -s -f $(CURDIR)/common/.zshrc $(HOME)/.zshrc
 
 tilix:
 	@echo "TODO"
 
 mutt:
-	@-cp -an $(HOME)/.config/mutt $(HOME)/.config/mutt.bkp
+	@-mv $(HOME)/.config/mutt $(HOME)/.config/mutt.bkp
 	ln -s -f $(CURDIR)/common/mutt $(HOME)/.config/mutt
 	@echo "#############################################"
 	@echo "Don't forget to set up mutt login via GPG!"
@@ -42,8 +42,8 @@ mutt:
 	@echo "#############################################"
 
 gpg:
-	@-cp -an $(HOME)/.gnupg/gpg.conf  $(HOME)/.gnupg/gpg.conf.bkp
-	cp -a $(CURDIR)/common/gpg/gpg.conf $(HOME)/.gnupg/gpg.conf
+	@-mv $(HOME)/.gnupg/gpg.conf  $(HOME)/.gnupg/gpg.conf.bkp
+	ln -s -f $(CURDIR)/common/gpg/gpg.conf $(HOME)/.gnupg/gpg.conf
 
 clean: $(SLINKS)
 	@-cp -a $(HOME)/.gnupg/gpg.conf.bkp  $(HOME)/.gnupg/gpg.conf
