@@ -1,0 +1,9 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =7
+let g:netrw_dirhist_7='/home/mayr/.config/neomutt/accounts'
+let g:netrw_dirhist_6='/etc/dhcp'
+let g:netrw_dirhist_5='/home/mayr/workspace/rc-ojs/volumes_bkp/config'
+let g:netrw_dirhist_4='/home/mayr/workspace/rc-ojs/volumes_bkp'
+let g:netrw_dirhist_3='/home/mayr/workspace/rc-ojs/volumes_bkp/config'
+let g:netrw_dirhist_2='/home/mayr/workspace/rc-ojs/volumes_bkp'
+let g:netrw_dirhist_1='/home/mayr/workspace/ojs-docker-official/ojs/versions/3_3_0-15/alpine/apache/php81/root/etc/php81/conf.d'

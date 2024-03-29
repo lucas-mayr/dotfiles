@@ -1,0 +1,20 @@
+# noops
+bind index,attach,pager g noop
+bind index,pager d noop
+
+# vim-like bindings         
+bind attach,browser,index       gg  first-entry
+bind attach,browser,index       G   last-entry
+bind pager                      gg  top
+bind pager                      G   bottom
+bind pager,index                dd  delete-message
+
+# qol stuff
+bind index \031 previous-undeleted	# Mouse wheel
+bind index \005 next-undeleted		# Mouse wheel
+bind pager \031 previous-line		# Mouse wheel
+bind pager \005 next-line		# Mouse wheel
+bind editor <Tab> complete-query
+bind index,pager R group-reply
+bind index,pager B sidebar-toggle-visible
+
