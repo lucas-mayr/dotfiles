@@ -20,6 +20,8 @@ cdda:
 	ln -s -f $(CURDIR)/common/.cataclysm-dda $(HOME)/.cataclysm-dda
 	curl -L https://github.com/Fris0uman/CDDA-Soundpacks/releases/download/2024-01-17/CC-Sounds.zip > /tmp/CC-Sounds.zip
 	unzip /tmp/CC-Sounds.zip -d $(CURDIR)/common/.cataclysm-dda/
+	curl -L "https://github.com/Theawesomeboophis/UndeadPeopleTileset/releases/download/3%2F4%2F24/Vanilla.zip" > /tmp/vanilla.zip
+	unzip /tmp/vanilla.zip -d $(CURDIR)/common/.cataclysm-dda/
 
 
 fortress:
