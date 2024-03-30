@@ -9,6 +9,7 @@
 
 # cdda sound pack is too big
 common/.cataclysm-dda/sound
+!common/.cataclysm-dda/sound/.gitkeep
 
 # debug files
 *.log
