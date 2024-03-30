@@ -1,13 +1,26 @@
+# :exec what-key helps
 # noops
 bind index,attach,pager g noop
 bind index,pager d noop
 
 # vim-like bindings         
-bind attach,browser,index       gg  first-entry
-bind attach,browser,index       G   last-entry
-bind pager                      gg  top
-bind pager                      G   bottom
-bind pager,index                dd  delete-message
+bind attach,browser,index       gg			first-entry
+bind attach,browser,index       G			last-entry
+bind pager                      gg			top
+bind pager                      G			bottom
+bind pager,index                dd			delete-message
+bind pager,index                A			purge-message
+bind pager,index				<S-Down>	next-page
+bind pager,index				<S-Up>		previous-page
+bind pager						<Down>		next-line
+bind pager						<Up>		previous-line
+
+# sidebar
+bind index,pager B			sidebar-toggle-visible
+# Move the highlight to the previous mailbox
+bind index,pager <C-Up>		sidebar-prev
+bind index,pager <C-Down>	sidebar-next
+bind index,pager <C-Right>	sidebar-open
 
 # qol stuff
 bind index \031 previous-undeleted	# Mouse wheel
@@ -16,5 +29,4 @@ bind pager \031 previous-line		# Mouse wheel
 bind pager \005 next-line		# Mouse wheel
 bind editor <Tab> complete-query
 bind index,pager R group-reply
-bind index,pager B sidebar-toggle-visible
 

@@ -30,7 +30,7 @@ auto_view text/html text/calendar application/ics # view html automatically
 alternative_order text/html text/plain text/enriched text/*
 
 set move = no
-set hostname=hackingteam                  # Name of our local host.
+set hostname=lmayr		                  # Name of our local host.
 set hidden_host                           # Hide host details.
 set envelope_from                         # set the envelope-from information
 set reverse_name=yes                      # build From: in the reply based on the To: address (must have
@@ -65,6 +65,13 @@ set write_inc=100                         # Write counter ticks every 100 msgs.
 set noconfirmappend                       # Just append, don't hassle me.
 set pager_stop                            # Don't skip msgs on next page.
 
+# sidebar
+set sidebar_visible = yes
+set sidebar_new_mail_only = yes
+set mail_check_stats
+set sidebar_sort_method = 'unread'
+set sidebar_format = '%B%<F? [%F]>%* %<N?%N/>%S'
+
 # status bar, date format, finding stuff etc.
 set status_chars = " *%A"
 set status_format = "[ Folder: %f ] [%r%m messages%?n? (%n new)?%?d? (%d to delete)?%?t? (%t tagged)? ]%>─%?p?( %p postponed )?"
@@ -89,8 +96,6 @@ unset markers
 
 set mailcap_path = ~/.config/mutt/mailcap
 set header_cache = "~/.cache/mutt"
-
-#set query_command = "khard email --parsable --search-in-source-files '%s'"
 
 # SSL hardening
 set ssl_force_tls=yes

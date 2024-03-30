@@ -1,12 +1,12 @@
 .DEFAULT_GOAL := all
 
-SLINKS := $(HOME)/.config/mutt $(HOME)/.vim $(HOME)/.zshrc $(HOME)/.config/i3
+SLINKS := $(HOME)/.config/mutt $(HOME)/.vim $(HOME)/.zshrc $(HOME)/.config/i3 $(HOME)/.cataclysm-dda
 
-.PHONY: all packages tilix mutt clean links gpg vim zsh i3 urist $(SLINKS)
+.PHONY: all packages tilix mutt cdda fortress clean links gpg vim zsh i3 urist $(SLINKS)
 
 all: packages tilix ohmyzsh links i3
 
-links: vim zsh mutt i3
+links: vim zsh mutt i3 cdda fortress
 
 packages:
 	sudo ./common/packages.sh
@@ -14,6 +14,14 @@ packages:
 i3:
 	@-mv $(HOME)/.config/i3 $(HOME)/.config/i3.bkp
 	ln -s -f $(CURDIR)/common/i3 $(HOME)/.config/i3
+
+cdda:
+	@-mv $(HOME)/.cataclysm-dda $(HOME)/.cataclysm-dda.bkp
+	ln -s -f $(CURDIR)/common/.cataclysm-dda $(HOME)/.cataclysm-dda
+
+fortress:
+	@-mv $(HOME)/.dwarffortress/data/save $(HOME)/.dwarffortress/data/save.bkp
+	ln -s -f $(CURDIR)/common/.dwarffortress/data/save $(HOME)/.dwarffortress/data/save
 
 urist:
 	@echo "TODO: Patch i3 to a particular configuration (WIP)"
