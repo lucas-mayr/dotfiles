@@ -11,5 +11,9 @@
 common/.cataclysm-dda/sound
 !common/.cataclysm-dda/sound/.gitkeep
 
+# cdda UDP graphics pack is a bit big
+common/.cataclysm-dda/gfx
+!common/.cataclysm-dda/gfx/.gitkeep
+
 # debug files
 *.log
