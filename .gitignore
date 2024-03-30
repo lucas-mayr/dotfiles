@@ -6,3 +6,9 @@
 # GPG
 *.gpg
 *.asc
+
+# cdda sound pack is too big
+common/.cataclysm-dda/sound
+
+# debug files
+*.log
