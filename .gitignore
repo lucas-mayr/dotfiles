@@ -3,6 +3,9 @@
 *.swo
 *~
 
+# vim
+common/.vim/.netrwhist
+
 # pipe
 *.pipe
 
