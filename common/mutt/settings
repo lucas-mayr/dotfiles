@@ -64,6 +64,7 @@ set read_inc=100                          # Read counter ticks every 100 msgs.
 set write_inc=100                         # Write counter ticks every 100 msgs.
 set noconfirmappend                       # Just append, don't hassle me.
 set pager_stop                            # Don't skip msgs on next page.
+set wait_key=no
 
 # sidebar
 set sidebar_visible = yes
