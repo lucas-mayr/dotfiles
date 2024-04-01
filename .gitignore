@@ -3,6 +3,9 @@
 *.swo
 *~
 
+# pipe
+*.pipe
+
 # GPG
 *.gpg
 *.asc
@@ -20,3 +23,6 @@ common/.cataclysm-dda/cache
 
 # debug files
 *.log
+
+# contacts
+common/mutt/contacts

@@ -110,12 +110,14 @@ set ssl_verify_host=yes
 
 # GPG SETTINGS
 
-set pgp_timeout=1800
+set pgp_timeout=7200
 set pgp_sign_as=0xDEADBEEF
 set pgp_verify_sig=yes
 set crypt_use_gpgme = yes
 set crypt_autosign = no
 set crypt_replyencrypt = yes
+
+set query_command = "~/.config/mutt/scripts/query-pipe.sh %s"
 
 push <show-version>
 message-hook '!(~g|~G) ~b"^-----BEGIN\ PGP\ (SIGNED\ )?MESSAGE"' "exec check-traditional-pgp"
