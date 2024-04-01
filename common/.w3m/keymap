@@ -1,0 +1,49 @@
+# New keybinds
+
+# Navigation
+keymap $ LINE_END
+keymap ^ LINE_BEGIN
+keymap 0 LINE_BEGIN
+keymap G END
+keymap gg BEGIN
+keymap ESC-g GOTO_LINE
+keymap w NEXT_WORD
+keymap b PREV_WORD
+
+# NPage Navigation
+keymap j COMMAND "MOVE_DOWN1"
+keymap k COMMAND "MOVE_UP1"
+
+# Undo
+keymap C-r REDO
+
+#keymap C-f NEXT_PAGE
+keymap C-f COMMAND "NEXT_PAGE"
+#keymap C-b PREV_PAGE
+keymap C-b COMMAND "PREV_PAGE"
+keymap H BACK
+keymap r RELOAD
+
+# Tab stuff
+keymap J NEXT_TAB
+keymap K PREV_TAB
+keymap o GOTO
+keymap O TAB_GOTO
+
+# Search
+keymap / WHEREIS
+keymap ? SEARCH_BACK
+keymap n SEARCH_NEXT
+keymap N SEARCH_PREV
+
+# Commands
+keymap :: COMMAND
+keymap :help HELP
+keymap :downloads DOWNLOAD_LIST
+#keymap :hist HISTORY
+keymap :q EXIT
+keymap :settings OPTIONS
+
+
+# copy url to clipboard
+keymap yy EXTERN 'printf %s | xclip -selection clipboard'

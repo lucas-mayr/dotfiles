@@ -2,11 +2,11 @@
 
 SLINKS := $(HOME)/.config/mutt $(HOME)/.vim $(HOME)/.zshrc $(HOME)/.config/i3 $(HOME)/.cataclysm-dda
 
-.PHONY: all packages tilix mutt cdda fortress clean links gpg vim zsh i3 urist $(SLINKS)
+.PHONY: all packages tilix mutt cdda fortress clean links gpg vim zsh i3 w3m urist $(SLINKS)
 
 all: packages tilix ohmyzsh links i3
 
-links: vim zsh mutt i3 cdda fortress
+links: vim zsh mutt i3 cdda fortress w3m
 
 packages:
 	sudo ./common/packages.sh
@@ -27,6 +27,10 @@ cdda:
 fortress:
 	@-mv $(HOME)/.dwarffortress/data/save $(HOME)/.dwarffortress/data/save.bkp
 	ln -s -f $(CURDIR)/common/.dwarffortress/data/save $(HOME)/.dwarffortress/data/save
+
+w3m:
+	@-mv $(HOME)/.w3m $(HOME)/.w3m.bkp
+	ln -s -f $(CURDIR)/common/.w3m $(HOME)/.w3m
 
 urist:
 	@echo "TODO: Patch i3 to a particular configuration (WIP)"
@@ -61,6 +65,7 @@ gpg:
 clean: $(SLINKS)
 	@-cp -a $(HOME)/.gnupg/gpg.conf.bkp  $(HOME)/.gnupg/gpg.conf
 	@-cp -a $(HOME)/.config/mutt.bkp $(HOME)/.config/mutt
+	@-cp -a $(HOME)/.w3m.bkp $(HOME)/.w3m
 	@-cp -a $(HOME)/.zshrc.bkp $(HOME)/.zshrc
 	@-cp -a $(HOME)/.config/i3.bkp $(HOME)/.config/i3
 
