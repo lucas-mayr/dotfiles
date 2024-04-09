@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 # based on https://github.com/benmaddison/fzf-complete-query/
+# We need a pipe, otherwise Mutt goes haywire. 
 
 basepath="$HOME/.config/mutt/scripts"
 query="$1"

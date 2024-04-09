@@ -2,9 +2,9 @@
 
 SLINKS := $(HOME)/.config/mutt $(HOME)/.vim $(HOME)/.zshrc $(HOME)/.config/i3 $(HOME)/.cataclysm-dda
 
-.PHONY: all packages tilix mutt cdda fortress clean links gpg vim zsh i3 w3m urist $(SLINKS)
+.PHONY: all packages reminders tilix mutt cdda fortress clean links gpg vim zsh i3 w3m urist $(SLINKS)
 
-all: packages tilix ohmyzsh links i3
+all: packages tilix ohmyzsh links i3 reminders
 
 links: vim zsh mutt i3 cdda fortress w3m
 
@@ -52,6 +52,10 @@ tilix:
 mutt:
 	@-mv $(HOME)/.config/mutt $(HOME)/.config/mutt.bkp
 	ln -s -f $(CURDIR)/common/mutt $(HOME)/.config/mutt
+
+reminders:
+	@echo "#############################################"
+	@echo "Setup your DNS/VPN!"
 	@echo "#############################################"
 	@echo "Don't forget to set up mutt login via GPG!"
 	@echo "Generate a new key: gpg --full-generate-key"

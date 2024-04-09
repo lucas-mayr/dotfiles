@@ -22,6 +22,9 @@ bind index,pager <C-Up>		sidebar-prev
 bind index,pager <C-Down>	sidebar-next
 bind index,pager <C-Right>	sidebar-open
 
+# mailbox macros
+macro index gi "<change-folder>=INBOX<enter>" "Go to all mail"
+
 # qol stuff
 bind index \031 previous-undeleted	# Mouse wheel
 bind index \005 next-undeleted		# Mouse wheel

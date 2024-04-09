@@ -8,7 +8,7 @@ dnf install -y vim i3 i3status dmenu i3lock feh fontawesome-fonts \
 		tilix xinput powertop xev zsh git \
 		openssl alsa-firmware openvpn3-client make snapd ffmpeg \
 		ffmpeg-libs alacritty neomutt zathura gnome-screenshot blueman ranger \
-		zfz libreoffice cataclysm-dda dwarffortress
+		zfz libreoffice cataclysm-dda dwarffortress git-lfs
 
 snap install spotify
 
