@@ -38,7 +38,7 @@ set reverse_name=yes                      # build From: in the reply based on th
 set postpone=ask-no                       # Ask about postponing.
 set print=ask-yes                         # Ask before printing.
 set delete=no                             # Ask before doing a delete.
-set include                               # Include the message in replies.
+set include=no                            # Include the message in replies.
 set sort=threads                          # always sort by thread
 set sort_aux=date-received                # Sort threads by date received.
 set charset=iso-8859-1                    # One of those days in England...

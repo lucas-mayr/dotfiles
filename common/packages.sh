@@ -1,14 +1,13 @@
 dnf update -y
 dnf makecache
 
-dnf install -y https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-`rpm -E %fedora`.noarch.rpm 
-dnf install -y https://download1.rpmfusion.org/free/fedora/rpmfusion-nonfree-release-`rpm -E %fedora`.noarch.rpm 
+dnf install -y https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 
-dnf install -y vim i3 i3status dmenu i3lock feh fontawesome-fonts \
+dnf config-manager --enable fedora-cisco-openh264
+
+dnf install --skip-broken -y vim i3 i3status dmenu i3lock feh fontawesome-fonts \
 		tilix xinput powertop xev zsh git \
-		openssl alsa-firmware openvpn3-client make snapd ffmpeg \
+		openssl alsa-firmware openvpn make snapd ffmpeg \
 		ffmpeg-libs alacritty neomutt zathura gnome-screenshot blueman ranger \
-		zfz libreoffice cataclysm-dda dwarffortress git-lfs
-
-snap install spotify
+		fzf libreoffice cataclysm-dda dwarffortress git-lfs
 
