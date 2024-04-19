@@ -36,10 +36,6 @@ bindsym $mod+Return exec tilix
 # Start mutt on a new window
 bindsym $mod+m exec tilix -x neomutt 
 
-# touchpad settings
-exec_always --no-startup-id xinput set-prop 9 346 1
-exec_always --no-startup-id xinput set-prop 9 319 1
-
 # kill focused window
 bindsym $mod+Shift+q kill
 
@@ -159,6 +155,9 @@ exec --no-startup-id ~/.config/i3/xrandr.sh
 
 #Keyboard setup
 exec --no-startup-id ~/.config/i3/keyboard.sh
+
+#Keyboard setup
+exec --no-startup-id ~/.config/i3/xinput.sh
 
 # resize window (you can also use the mouse for that)
 mode "resize" {

@@ -9,6 +9,9 @@ common/.vim/.netrwhist
 # pipe
 *.pipe
 
+# symlink
+*@
+
 # GPG
 *.gpg
 *.asc
