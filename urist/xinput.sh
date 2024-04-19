@@ -6,5 +6,3 @@ TAPPING=$(xinput list-props $TOUCHPAD | grep -oP "Tapping Enabled \(\K\d+")
 
 xinput set-prop $TOUCHPAD $NAT_SCROLL 1
 xinput set-prop $TOUCHPAD $TAPPING 1
-
-#xinput set-prop <DEVICE> <PROP> <1/0> 
