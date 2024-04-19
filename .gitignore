@@ -10,7 +10,9 @@ common/.vim/.netrwhist
 *.pipe
 
 # symlink
-*@
+common/xinput.sh
+common/keyboard.sh
+common/xrandr.sh
 
 # GPG
 *.gpg
